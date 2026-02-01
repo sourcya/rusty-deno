@@ -1,0 +1,19 @@
+# Rust build artifacts
+native/target/
+
+# Compiled native libraries (built locally, included in package via CI)
+lib/*.so
+
+# Deno
+.deno/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,12 @@
+[package]
+name = "sourcya_rusty_deno_hello"
+version = "0.1.1"
+edition = "2024"
+description = "Hello module with system info for rusty-deno FFI"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+sysinfo = "0.31"

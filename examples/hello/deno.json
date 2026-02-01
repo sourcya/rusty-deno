@@ -1,0 +1,10 @@
+{
+  "name": "@sourcya/rusty-deno-example-hello",
+  "version": "0.1.0",
+  "imports": {
+    "@sourcya/rusty-deno/": "../../src/"
+  },
+  "tasks": {
+    "start": "deno run --unstable-ffi --allow-ffi main.ts"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@sourcya/rusty-deno",
+  "version": "0.1.1",
+  "description": "Native Rust FFI bindings for Deno applications",
+  "author": "Mutasim Issa <mutasim@sourcya.com>",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/mod.ts",
+    "./hello": "./src/hello.ts"
+  },
+  "publish": {
+    "include": [
+      "src/**/*.ts",
+      "lib/**/*.so",
+      "README.md",
+      "LICENSE"
+    ]
+  },
+  "tasks": {
+    "build": "cd native && ./build.sh",
+    "build:verbose": "cd native && ./build.sh -v",
+    "clean": "cd native && ./build.sh -c",
+    "example:hello": "cd examples/hello && deno task start",
+    "check": "deno check src/**/*.ts"
+  }
+}
