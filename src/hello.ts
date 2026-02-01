@@ -1,7 +1,21 @@
 /**
- * Hello module - provides system information from Rust FFI
- * All functions are async and run on separate threads (non-blocking)
+ * Hello module - provides system information from Rust FFI.
+ *
+ * All functions are async and run on separate threads (non-blocking).
+ *
+ * @example
+ * ```ts
+ * import { hello, getPid, getCpuCount, close } from "@sourcya/rusty-deno/hello";
+ *
+ * console.log(await hello()); // "Hello World!"
+ * console.log("PID:", await getPid());
+ * console.log("CPU cores:", await getCpuCount());
+ *
+ * close();
+ * ```
+ *
  * @see https://docs.deno.com/runtime/reference/ffi_api/
+ * @module
  */
 
 import { loadLibrary, readCStringAsync } from "./lib.ts";
